@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using TheFoodParliament.Entities.Models;
-using TheFoodParliament.Infrasctucture.Context;
+using TheFoodParliament.Infrastructure.Context;
 
 namespace TheFoodParliament.Infrastructure.Repositories
 {

@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using TheFoodParliament.Entities.Models;
 
-namespace TheFoodParliament.Infrasctucture.Context
+namespace TheFoodParliament.Infrastructure.Context
 {
     public class ParliamentContext : DbContext
     {
