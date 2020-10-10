@@ -12,11 +12,9 @@ namespace TheFoodParliament.Entities.Models
         }
 
         public int Id { get; set; }
-
+        public string PlacesApiId { get; set; }
         public string Name { get; private set; }
-
         public string Address { get; private set; }
-
         public float Distance { get; private set; }
         public DateTime CreationDate { get; set; }
     }

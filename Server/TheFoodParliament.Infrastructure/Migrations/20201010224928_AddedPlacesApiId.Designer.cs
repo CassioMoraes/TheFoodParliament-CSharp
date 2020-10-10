@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TheFoodParliament.Infrasctucture.Context;
@@ -9,9 +10,10 @@ using TheFoodParliament.Infrasctucture.Context;
 namespace TheFoodParliament.Infrastructure.Migrations
 {
     [DbContext(typeof(ParliamentContext))]
-    partial class ParliamentContextModelSnapshot : ModelSnapshot
+    [Migration("20201010224928_AddedPlacesApiId")]
+    partial class AddedPlacesApiId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
