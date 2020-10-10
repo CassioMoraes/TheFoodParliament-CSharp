@@ -1,8 +1,8 @@
 using System;
 
-namespace TheFoodParliament.Models
+namespace TheFoodParliament.Entities.Models
 {
-    public class Restaurant
+    public class Restaurant : Entity
     {
         public Restaurant(string name, string address, float distance)
         {
@@ -11,10 +11,13 @@ namespace TheFoodParliament.Models
             this.Distance = distance;
         }
 
+        public int Id { get; set; }
+
         public string Name { get; private set; }
 
         public string Address { get; private set; }
 
         public float Distance { get; private set; }
+        public DateTime CreationDate { get; set; }
     }
 }

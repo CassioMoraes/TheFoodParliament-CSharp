@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using TheFoodParliament.Models;
+using TheFoodParliament.Entities.Models;
 
 namespace TheFoodParliament.Services
 {

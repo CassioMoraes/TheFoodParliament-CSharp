@@ -1,4 +1,4 @@
-namespace TheFoodParliament.Models
+namespace TheFoodParliament.Entities.Models
 {
     public class Location
     {

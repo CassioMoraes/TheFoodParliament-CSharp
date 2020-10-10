@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TheFoodParliament.Models;
+using TheFoodParliament.Entities.Models;
 using TheFoodParliament.Services;
 
 namespace TheFoodParliament.Controllers

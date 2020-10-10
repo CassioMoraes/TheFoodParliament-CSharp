@@ -1,6 +1,6 @@
 using System.Linq;
 using NUnit.Framework;
-using TheFoodParliament.Models;
+using TheFoodParliament.Entities.Models;
 using TheFoodParliament.Services;
 
 namespace TheFoodParliament.Tests

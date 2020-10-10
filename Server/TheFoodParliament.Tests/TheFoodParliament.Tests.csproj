@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TheFoodParliament\TheFoodParliament.csproj" />
+    <ProjectReference Include="..\TheFoodParliament.Entities\TheFoodParliament.Entities.csproj" />
   </ItemGroup>
 
 </Project>
