@@ -21,10 +21,12 @@ namespace TheFoodParliament.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Restaurant> Get(float lat, float @long)
+        public ActionResult<IEnumerable<Restaurant>> Get(float lat, float @long)
         {
             var location = new Location { Latitude = lat, Longitude = @long };
-            return _restaurantService.GetNearbyRestaurants(location);
+            var restaurants = _restaurantService.GetNearbyRestaurants(location);
+
+            return Ok(restaurants);
         }
     }
 }
