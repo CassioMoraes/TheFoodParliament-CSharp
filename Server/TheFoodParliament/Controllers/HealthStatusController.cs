@@ -7,9 +7,9 @@ namespace TheFoodParliament.Controllers
     public class HealthStatusController : ControllerBase
     {
         [HttpGet]
-        public string Get()
+        public IActionResult Get()
         {
-            return "Up and running";
+            return Ok("Up and running");
         }
     }
 }

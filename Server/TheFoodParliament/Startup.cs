@@ -25,6 +25,7 @@ namespace TheFoodParliament
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IDateTimeWrapper, DateTimeWrapper>();
             services.AddScoped<IPlacesApiWrapper, PlacesApiWrapper>();
             services.AddScoped<IRestaurantService, RestaurantService>();
             services.AddScoped<IVoteService, VoteService>();
