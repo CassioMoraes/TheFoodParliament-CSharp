@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
@@ -16,30 +17,31 @@ namespace TheFoodParliament.Infrastructure.Repositories
             this._context = context;
             _entities = context.Set<T>();
         }
-        
+
         public void Add(T item)
         {
+            item.CreationDate = DateTime.Now;
             _entities.Add(item);
             _context.SaveChanges();
         }
-        
+
         public T GetById(int id)
         {
             return _entities.Find(id);
         }
-        
+
         public IEnumerable<T> GetAll()
         {
             return _entities.ToList();
         }
-        
+
         public void Update(T item)
         {
             _entities.Attach(item);
             _context.Entry(item).State = EntityState.Modified;
             _context.SaveChanges();
         }
-        
+
         public void Delete(int id)
         {
             var existing = _entities.Find(id);

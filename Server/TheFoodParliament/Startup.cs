@@ -4,8 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TheFoodParliament.Entities.Models;
 using TheFoodParliament.Infrastructure.Context;
+using TheFoodParliament.Infrastructure.Repositories;
 using TheFoodParliament.Services;
+using TheFoodParliament.Wrappers;
 
 namespace TheFoodParliament
 {
@@ -22,7 +25,9 @@ namespace TheFoodParliament
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IPlacesApiWrapper, PlacesApiWrapper>();
             services.AddScoped<IRestaurantService, RestaurantService>();
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
             services.AddDbContext<ParliamentContext>(p => p.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
         }

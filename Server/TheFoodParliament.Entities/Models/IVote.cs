@@ -2,10 +2,10 @@ using System;
 
 namespace TheFoodParliament.Entities.Models
 {
-    public class Entity
+    public  class Entity
     {
-        int Id { get; set; }
+        public int Id { get; set; }
 
-        DateTime CreationDate { get; set; }
+        public DateTime CreationDate { get; set; }
     }
 }

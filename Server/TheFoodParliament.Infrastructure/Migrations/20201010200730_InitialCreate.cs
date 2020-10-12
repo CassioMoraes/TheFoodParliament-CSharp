@@ -36,6 +36,16 @@ namespace TheFoodParliament.Infrastructure.Migrations
                     table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
+            migrationBuilder.InsertData(
+                   table: "Users",
+                   columns: new[] { "Name, CreationDate" },
+                   values: new object[,] {
+                        { "João", DateTime.Now },
+                        { "Maria", DateTime.Now },
+                        { "Pedro", DateTime.Now },
+                        { "Paula", DateTime.Now }
+                });
+
             migrationBuilder.CreateTable(
                 name: "Votes",
                 columns: table => new
