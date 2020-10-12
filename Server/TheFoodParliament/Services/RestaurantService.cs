@@ -30,7 +30,9 @@ namespace TheFoodParliament.Services
             foreach (var newRestaurant in newRestaurants)
                 _restaurantRepository.Add(newRestaurant);
 
-            return restaurants;
+            var nearbyRestaurants = _restaurantRepository.GetAll().Where(r => restaurants.Any(pr => pr.PlacesApiId == r.PlacesApiId));
+
+            return nearbyRestaurants;
         }
     }
 }

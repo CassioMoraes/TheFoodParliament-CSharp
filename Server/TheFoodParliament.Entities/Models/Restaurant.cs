@@ -4,6 +4,9 @@ namespace TheFoodParliament.Entities.Models
 {
     public class Restaurant : BaseEntity
     {
+        public Restaurant()
+        { }
+
         public Restaurant(string placesApiId, string name, string address, float distance)
         {
             this.PlacesApiId = placesApiId;

@@ -30,6 +30,7 @@ namespace TheFoodParliament
             services.AddScoped<IRestaurantService, RestaurantService>();
             services.AddScoped<IVoteService, VoteService>();
             services.AddScoped<IElectionService, ElectionService>();
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
             services.AddDbContext<ParliamentContext>(p => p.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
@@ -45,6 +46,9 @@ namespace TheFoodParliament
 
             //Commented to allow HTTP
             //app.UseHttpsRedirection();
+
+            // Usando somente em dev
+            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseRouting();
 
