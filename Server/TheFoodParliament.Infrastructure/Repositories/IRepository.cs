@@ -3,7 +3,7 @@ using TheFoodParliament.Entities.Models;
 
 namespace TheFoodParliament.Infrastructure.Repositories
 {
-    public interface IRepository<T> where T : Entity
+    public interface IRepository<T> where T : BaseEntity
     {
         void Add(T item);
         T GetById(int id);

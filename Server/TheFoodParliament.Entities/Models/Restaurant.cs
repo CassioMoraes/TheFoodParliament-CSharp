@@ -2,7 +2,7 @@ using System;
 
 namespace TheFoodParliament.Entities.Models
 {
-    public class Restaurant : Entity
+    public class Restaurant : BaseEntity
     {
         public Restaurant(string placesApiId, string name, string address, float distance)
         {

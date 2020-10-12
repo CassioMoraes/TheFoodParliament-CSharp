@@ -7,7 +7,7 @@ using TheFoodParliament.Infrastructure.Context;
 
 namespace TheFoodParliament.Infrastructure.Repositories
 {
-    public class GenericRepository<T> : IRepository<T> where T : Entity
+    public class GenericRepository<T> : IRepository<T> where T : BaseEntity
     {
         private ParliamentContext _context;
         private DbSet<T> _entities;

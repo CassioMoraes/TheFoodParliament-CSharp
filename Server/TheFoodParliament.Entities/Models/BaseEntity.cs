@@ -2,7 +2,7 @@ using System;
 
 namespace TheFoodParliament.Entities.Models
 {
-    public  class Entity
+    public  class BaseEntity
     {
         public int Id { get; set; }
 
