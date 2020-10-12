@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 
 namespace TheFoodParliament.Wrappers
 {
@@ -12,6 +13,11 @@ namespace TheFoodParliament.Wrappers
         public DateTime Parse(string dateString)
         {
             return DateTime.Parse(dateString);
+        }
+
+        public DateTime Parse(string dateString, string format)
+        {
+            return DateTime.ParseExact(dateString, format, CultureInfo.InvariantCulture);
         }
     }
 }
