@@ -1,8 +1,5 @@
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TheFoodParliament.Entities.Models;
-using TheFoodParliament.Services;
 
 namespace TheFoodParliament.Controllers
 {
@@ -18,6 +15,14 @@ namespace TheFoodParliament.Controllers
         {
             _logger = logger;
             _electionService = electionService;
+        }
+
+        [HttpGet]
+        [Route("last-winner")]
+        public IActionResult GetLastWinner()
+        {
+            var winner = _electionService.GetLastWinner();
+            return Ok(winner);
         }
 
         [HttpGet]

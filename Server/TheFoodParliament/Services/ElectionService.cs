@@ -20,6 +20,18 @@ namespace TheFoodParliament.Services
             _dateTimeWrapper = dateTimeWrapper;
         }
 
+        public ObjectResponse GetLastWinner()
+        {
+            var lastWinner = _electionRepository.GetAll()
+                .OrderByDescending(e => e.WinningDate)
+                .FirstOrDefault();
+
+            if (lastWinner == null)
+                return ObjectResponse.Error("There is no winner so far!", null);
+
+            return ObjectResponse.Success("The Last winner", lastWinner);
+        }
+
         public ObjectResponse ComputeElectionResult()
         {
             if (this.IsElectionOpen())
