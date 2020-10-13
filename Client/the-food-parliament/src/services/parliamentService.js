@@ -19,4 +19,12 @@ export default class ParliamentService {
         const vote = { userId, restaurantId };
         return this.axios.post('vote', vote);
     }
+
+    isElectionOpen() {
+        return this.axios.get('election/is-election-open');
+    }
+
+    getLastWinner() {
+        return this.axios.get('election/last-winner');
+    }
 }
