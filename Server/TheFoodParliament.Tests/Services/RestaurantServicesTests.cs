@@ -30,6 +30,7 @@ namespace TheFoodParliament.Tests
             _placesApiWrapperMock.Setup(m => m.GetRestaurantsNearby(It.IsAny<Location>())).Returns(defaultPlacesList);
 
             _restaurantRepositoryMock = new Mock<IRepository<Restaurant>>();
+            _restaurantRepositoryMock.Setup(m => m.GetAll()).Returns(defaultPlacesList);
         }
 
         [TestCase(10, 10)]

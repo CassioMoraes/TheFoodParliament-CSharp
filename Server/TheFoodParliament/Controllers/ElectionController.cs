@@ -22,7 +22,7 @@ namespace TheFoodParliament.Controllers
 
         [HttpGet]
         [Route("compute-result")]
-        public IActionResult GetElectionWinner()
+        public IActionResult ComputeResults()
         {
             var winner = _electionService.ComputeElectionResult();
             return Ok(winner);
