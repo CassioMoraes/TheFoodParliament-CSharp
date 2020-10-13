@@ -12,10 +12,10 @@ namespace TheFoodParliament.Infrastructure.Migrations
                 columns: new[] { "Id", "CreationDate", "Name" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2020, 10, 12, 9, 11, 35, 385, DateTimeKind.Local).AddTicks(6790), "João" },
-                    { 2, new DateTime(2020, 10, 12, 9, 11, 35, 425, DateTimeKind.Local).AddTicks(5360), "Maria" },
-                    { 3, new DateTime(2020, 10, 12, 9, 11, 35, 425, DateTimeKind.Local).AddTicks(5420), "Pedro" },
-                    { 4, new DateTime(2020, 10, 12, 9, 11, 35, 425, DateTimeKind.Local).AddTicks(5420), "Paula" }
+                    { 1, new DateTime(2020, 10, 13, 0, 11, 2, 907, DateTimeKind.Local).AddTicks(8300), "João" },
+                    { 2, new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4070), "Maria" },
+                    { 3, new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4130), "Pedro" },
+                    { 4, new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4130), "Paula" }
                 });
         }
 

@@ -10,7 +10,7 @@ using TheFoodParliament.Infrastructure.Context;
 namespace TheFoodParliament.Infrastructure.Migrations
 {
     [DbContext(typeof(ParliamentContext))]
-    [Migration("20201012121136_AddDefaultUsers")]
+    [Migration("20201013031103_AddDefaultUsers")]
     partial class AddDefaultUsers
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,32 @@ namespace TheFoodParliament.Infrastructure.Migrations
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn)
                 .HasAnnotation("ProductVersion", "3.1.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
+
+            modelBuilder.Entity("TheFoodParliament.Entities.Models.Election", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<int>("RestaurantId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Votes")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("WinningDate")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RestaurantId");
+
+                    b.ToTable("Elections");
+                });
 
             modelBuilder.Entity("TheFoodParliament.Entities.Models.Restaurant", b =>
                 {
@@ -69,25 +95,25 @@ namespace TheFoodParliament.Infrastructure.Migrations
                         new
                         {
                             Id = 1,
-                            CreationDate = new DateTime(2020, 10, 12, 9, 11, 35, 385, DateTimeKind.Local).AddTicks(6790),
+                            CreationDate = new DateTime(2020, 10, 13, 0, 11, 2, 907, DateTimeKind.Local).AddTicks(8300),
                             Name = "João"
                         },
                         new
                         {
                             Id = 2,
-                            CreationDate = new DateTime(2020, 10, 12, 9, 11, 35, 425, DateTimeKind.Local).AddTicks(5360),
+                            CreationDate = new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4070),
                             Name = "Maria"
                         },
                         new
                         {
                             Id = 3,
-                            CreationDate = new DateTime(2020, 10, 12, 9, 11, 35, 425, DateTimeKind.Local).AddTicks(5420),
+                            CreationDate = new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4130),
                             Name = "Pedro"
                         },
                         new
                         {
                             Id = 4,
-                            CreationDate = new DateTime(2020, 10, 12, 9, 11, 35, 425, DateTimeKind.Local).AddTicks(5420),
+                            CreationDate = new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4130),
                             Name = "Paula"
                         });
                 });
@@ -114,6 +140,15 @@ namespace TheFoodParliament.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Votes");
+                });
+
+            modelBuilder.Entity("TheFoodParliament.Entities.Models.Election", b =>
+                {
+                    b.HasOne("TheFoodParliament.Entities.Models.Restaurant", "Restaurant")
+                        .WithMany()
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -88,6 +88,32 @@ namespace TheFoodParliament.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreationDate = new DateTime(2020, 10, 13, 0, 11, 2, 907, DateTimeKind.Local).AddTicks(8300),
+                            Name = "João"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreationDate = new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4070),
+                            Name = "Maria"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreationDate = new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4130),
+                            Name = "Pedro"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreationDate = new DateTime(2020, 10, 13, 0, 11, 2, 935, DateTimeKind.Local).AddTicks(4130),
+                            Name = "Paula"
+                        });
                 });
 
             modelBuilder.Entity("TheFoodParliament.Entities.Models.Vote", b =>
