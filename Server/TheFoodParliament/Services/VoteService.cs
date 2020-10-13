@@ -85,7 +85,7 @@ namespace TheFoodParliament.Services
             var lastDayOfWeek = _dateTimeWrapper.Now().AddDays(6 - currentDay);
 
             var hasAlreadyElected = _electionRepository.GetAll()
-                .Any(e => e.WinnerId == restaurantId && e.WinningDate >= firstDayOfWeek && e.WinningDate <= lastDayOfWeek);
+                .Any(e => e.RestaurantId == restaurantId && e.WinningDate >= firstDayOfWeek && e.WinningDate <= lastDayOfWeek);
 
             if (hasAlreadyElected)
                 return SimpleResponse.Error("Restaurant already elected this week");

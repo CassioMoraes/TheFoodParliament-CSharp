@@ -13,5 +13,10 @@ namespace TheFoodParliament.Infrastructure.Context
         public DbSet<Vote> Votes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Election> Elections { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Election>().HasOne(b => b.Restaurant);
+        }
     }
 }

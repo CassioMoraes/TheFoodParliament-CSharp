@@ -8,10 +8,10 @@ namespace TheFoodParliament.Services
 {
     public class ElectionService : IElectionService
     {
-        private IRepository<Election> _electionRepository;
+        private IElectionRepository _electionRepository;
         private IRepository<Vote> _voteRepository;
         private IDateTimeWrapper _dateTimeWrapper;
-        public ElectionService(IRepository<Election> electionRepository,
+        public ElectionService(IElectionRepository electionRepository,
             IRepository<Vote> voteRepository,
             IDateTimeWrapper dateTimeWrapper)
         {
@@ -22,7 +22,7 @@ namespace TheFoodParliament.Services
 
         public ObjectResponse GetLastWinner()
         {
-            var lastWinner = _electionRepository.GetAll()
+            var lastWinner = _electionRepository.GetAllWithRestaurants()
                 .OrderByDescending(e => e.WinningDate)
                 .FirstOrDefault();
 
@@ -51,12 +51,12 @@ namespace TheFoodParliament.Services
 
             var election = new Election
             {
-                WinnerId = mostVoted.Key,
+                RestaurantId = mostVoted.Key,
                 WinningDate = _dateTimeWrapper.Now(),
                 Votes = mostVoted.Count()
             };
 
-            _electionRepository.Add(election);
+            (_electionRepository as GenericRepository<Election>).Add(election);
 
             return ObjectResponse.Success("", election);
         }

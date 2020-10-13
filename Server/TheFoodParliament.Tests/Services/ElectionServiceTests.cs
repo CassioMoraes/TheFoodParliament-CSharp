@@ -12,14 +12,14 @@ namespace TheFoodParliament.Tests
 {
     public class ElectionServiceTests
     {
-        private Mock<IRepository<Election>> _electionRepositoryMock;
+        private Mock<IElectionRepository> _electionRepositoryMock;
         private Mock<IRepository<Vote>> _voteRepositoryMock;
         private Mock<IDateTimeWrapper> _dateTimeWrapperMock;
 
         [OneTimeSetUp]
         public void TestSetup()
         {
-            _electionRepositoryMock = new Mock<IRepository<Election>>();
+            _electionRepositoryMock = new Mock<IElectionRepository>();
 
             _dateTimeWrapperMock = new Mock<IDateTimeWrapper>();
             _dateTimeWrapperMock.Setup(m => m.Now()).Returns(DateTime.Parse("01-01-2000 12:00:00 PM"));
@@ -48,7 +48,7 @@ namespace TheFoodParliament.Tests
                 _dateTimeWrapperMock.Object);
             var winner = electionService.ComputeElectionResult();
 
-            Assert.AreEqual(expectedWinnerId, (winner.Result as Election).WinnerId);
+            Assert.AreEqual(expectedWinnerId, (winner.Result as Election).RestaurantId);
         }
 
         [TestCase(1)]
@@ -59,7 +59,7 @@ namespace TheFoodParliament.Tests
                 _dateTimeWrapperMock.Object);
             var winner = electionService.ComputeElectionResult();
 
-            Assert.AreEqual(expectedWinnerId, (winner.Result as Election).WinnerId);
+            Assert.AreEqual(expectedWinnerId, (winner.Result as Election).RestaurantId);
         }
 
         [TestCase("10:00")]

@@ -76,7 +76,7 @@ namespace TheFoodParliament.Tests.Services
         public void CastVote_PassingUserAndRestaurantAlreadyElected_ShouldResturnRestaurantAlreadyElectedError(
             int user, int restaurant, string winningDate, string currentDate)
         {
-            var elected = new Election { Votes = 1, WinnerId = 1, WinningDate = DateTime.Parse(winningDate) };
+            var elected = new Election { Votes = 1, RestaurantId = 1, WinningDate = DateTime.Parse(winningDate) };
             var localElectionRepositoryMock = new Mock<IRepository<Election>>();
             localElectionRepositoryMock.Setup(m => m.GetAll()).Returns(new List<Election> { elected });
 

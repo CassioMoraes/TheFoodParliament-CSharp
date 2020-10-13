@@ -1,13 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <ItemGroup>
-    <ProjectReference Include="..\TheFoodParliament.Infrastructure\TheFoodParliament.Infrastructure.csproj" />
-    <ProjectReference Include="..\TheFoodParliament.Entities\TheFoodParliament.Entities.csproj" />
+    <ProjectReference Include="..\TheFoodParliament.Infrastructure\TheFoodParliament.Infrastructure.csproj"/>
+    <ProjectReference Include="..\TheFoodParliament.Entities\TheFoodParliament.Entities.csproj"/>
   </ItemGroup>
-
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4"/>
+  </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
-
 </Project>

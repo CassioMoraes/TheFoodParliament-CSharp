@@ -31,6 +31,7 @@ namespace TheFoodParliament
             services.AddScoped<IVoteService, VoteService>();
             services.AddScoped<IElectionService, ElectionService>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IElectionRepository, ElectionRepository>();
             services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 
             services.AddDbContext<ParliamentContext>(p => p.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
