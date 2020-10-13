@@ -56,7 +56,7 @@ namespace TheFoodParliament.Services
                 Votes = mostVoted.Count()
             };
 
-            (_electionRepository as GenericRepository<Election>).Add(election);
+            _electionRepository.Add(election);
 
             return ObjectResponse.Success("", election);
         }

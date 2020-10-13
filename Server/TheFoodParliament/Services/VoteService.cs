@@ -45,6 +45,8 @@ namespace TheFoodParliament.Services
             if (!restaurantAlreadyElected.Status)
                 return restaurantAlreadyElected;
 
+            vote.Date = _dateTimeWrapper.Now();
+
             _voteRepository.Add(vote);
 
             return SimpleResponse.Success("Vote casted with success!");

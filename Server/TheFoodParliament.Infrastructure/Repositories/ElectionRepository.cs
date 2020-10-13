@@ -6,7 +6,7 @@ using TheFoodParliament.Infrastructure.Context;
 
 namespace TheFoodParliament.Infrastructure.Repositories
 {
-    public class ElectionRepository : GenericRepository<Election>, IRepository<Election>, IElectionRepository
+    public class ElectionRepository : GenericRepository<Election>, IElectionRepository
     {
         private ParliamentContext _context;
         private DbSet<Election> _entities;

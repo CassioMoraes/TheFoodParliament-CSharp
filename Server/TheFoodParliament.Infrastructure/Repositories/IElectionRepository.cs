@@ -5,6 +5,8 @@ namespace TheFoodParliament.Infrastructure.Repositories
 {
     public interface IElectionRepository
     {
+        void Add(Election item);
+
         IEnumerable<Election> GetAllWithRestaurants();
     }
 }
