@@ -8,9 +8,9 @@ namespace TheFoodParliament.Services
 {
     public class ElectionService : IElectionService
     {
-        private IElectionRepository _electionRepository;
-        private IRepository<Vote> _voteRepository;
-        private IDateTimeWrapper _dateTimeWrapper;
+        private readonly IElectionRepository _electionRepository;
+        private readonly IRepository<Vote> _voteRepository;
+        private readonly IDateTimeWrapper _dateTimeWrapper;
         public ElectionService(IElectionRepository electionRepository,
             IRepository<Vote> voteRepository,
             IDateTimeWrapper dateTimeWrapper)

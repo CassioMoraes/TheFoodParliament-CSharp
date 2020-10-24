@@ -9,11 +9,11 @@ namespace TheFoodParliament.Services
 {
     public class VoteService : IVoteService
     {
-        private IRepository<Vote> _voteRepository;
-        private IRepository<User> _userRepository;
-        private IRepository<Restaurant> _restaurantRepository;
-        private IRepository<Election> _electionRepository;
-        private IDateTimeWrapper _dateTimeWrapper;
+        private readonly IRepository<Vote> _voteRepository;
+        private readonly IRepository<User> _userRepository;
+        private readonly IRepository<Restaurant> _restaurantRepository;
+        private readonly IRepository<Election> _electionRepository;
+        private readonly IDateTimeWrapper _dateTimeWrapper;
 
         public VoteService(IRepository<Vote> voteRepository,
             IRepository<User> userRepository,

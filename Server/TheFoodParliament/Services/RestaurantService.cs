@@ -8,8 +8,8 @@ namespace TheFoodParliament.Services
 {
     public class RestaurantService : IRestaurantService
     {
-        private IPlacesApiWrapper _placesApiWrapper;
-        private IRepository<Restaurant> _restaurantRepository;
+        private readonly IPlacesApiWrapper _placesApiWrapper;
+        private readonly IRepository<Restaurant> _restaurantRepository;
 
         public RestaurantService(IPlacesApiWrapper placesApiWrapper,
             IRepository<Restaurant> restaurantRepository)
