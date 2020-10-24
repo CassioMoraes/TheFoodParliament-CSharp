@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using TheFoodParliament.Entities.Models;
 
-namespace TheFoodParliament.Wrappers
+namespace TheFoodParliament.Domain.Wrappers
 {
     public interface IPlacesApiWrapper
     {

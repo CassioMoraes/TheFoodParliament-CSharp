@@ -1,4 +1,4 @@
-namespace TheFoodParliament.Responses
+namespace TheFoodParliament.Domain.Responses
 {
     public class ObjectResponse
     {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using TheFoodParliament.Entities.Models;
 using TheFoodParliament.Infrastructure.Repositories;
 
-namespace TheFoodParliament.Services
+namespace TheFoodParliament.Domain.Services
 {
     public class UserService : IUserService
     {

@@ -1,7 +1,7 @@
+using TheFoodParliament.Domain.Responses;
 using TheFoodParliament.Entities.Models;
-using TheFoodParliament.Responses;
 
-namespace TheFoodParliament.Services
+namespace TheFoodParliament.Domain.Services
 {
     public interface IVoteService
     {

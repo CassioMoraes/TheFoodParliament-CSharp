@@ -1,7 +1,7 @@
 using System;
 using System.Globalization;
 
-namespace TheFoodParliament.Wrappers
+namespace TheFoodParliament.Domain.Wrappers
 {
     public class DateTimeWrapper : IDateTimeWrapper
     {

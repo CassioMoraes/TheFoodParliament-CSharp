@@ -1,6 +1,6 @@
-using TheFoodParliament.Responses;
+using TheFoodParliament.Domain.Responses;
 
-namespace TheFoodParliament
+namespace TheFoodParliament.Domain.Services
 {
     public interface IElectionService
     {

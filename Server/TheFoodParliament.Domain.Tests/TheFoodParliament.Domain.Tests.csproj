@@ -10,7 +10,7 @@
     <PackageReference Include="Moq" Version="4.14.6"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TheFoodParliament\TheFoodParliament.csproj"/>
+    <ProjectReference Include="..\TheFoodParliament.Domain\TheFoodParliament.Domain.csproj"/>
     <ProjectReference Include="..\TheFoodParliament.Entities\TheFoodParliament.Entities.csproj"/>
   </ItemGroup>
 </Project>

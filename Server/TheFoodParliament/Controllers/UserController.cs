@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using TheFoodParliament.Services;
+using TheFoodParliament.Domain.Services;
+using TheFoodParliament.Domain.Responses;
 
 namespace TheFoodParliament.Controllers
 {

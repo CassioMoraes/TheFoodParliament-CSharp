@@ -4,11 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TheFoodParliament.Entities.Models;
+using TheFoodParliament.Domain.Services;
+using TheFoodParliament.Domain.Wrappers;
 using TheFoodParliament.Infrastructure.Context;
 using TheFoodParliament.Infrastructure.Repositories;
-using TheFoodParliament.Services;
-using TheFoodParliament.Wrappers;
 
 namespace TheFoodParliament
 {

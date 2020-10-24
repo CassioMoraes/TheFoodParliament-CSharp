@@ -5,10 +5,10 @@ using Moq;
 using NUnit.Framework;
 using TheFoodParliament.Entities.Models;
 using TheFoodParliament.Infrastructure.Repositories;
-using TheFoodParliament.Services;
-using TheFoodParliament.Wrappers;
+using TheFoodParliament.Domain.Services;
+using TheFoodParliament.Domain.Wrappers;
 
-namespace TheFoodParliament.Tests
+namespace TheFoodParliament.Domain.Tests.Services
 {
     public class ElectionServiceTests
     {

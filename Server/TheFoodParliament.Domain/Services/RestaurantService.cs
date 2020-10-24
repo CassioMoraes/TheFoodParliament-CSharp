@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
+using TheFoodParliament.Domain.Wrappers;
 using TheFoodParliament.Entities.Models;
 using TheFoodParliament.Infrastructure.Repositories;
-using TheFoodParliament.Wrappers;
 
-namespace TheFoodParliament.Services
+namespace TheFoodParliament.Domain.Services
 {
     public class RestaurantService : IRestaurantService
     {

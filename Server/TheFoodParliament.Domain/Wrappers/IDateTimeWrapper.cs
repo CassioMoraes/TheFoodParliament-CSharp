@@ -1,6 +1,6 @@
 using System;
 
-namespace TheFoodParliament.Wrappers
+namespace TheFoodParliament.Domain.Wrappers
 {
     public interface IDateTimeWrapper
     {
