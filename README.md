@@ -1,6 +1,6 @@
 # TheFoodParliament-CSharp
 
-Um ferramenta que auxilia a tomada de desição mais importante do dia para um time... aonde almoçar.
+Um ferramenta que auxilia a tomada de decição mais importante do dia para um time... aonde almoçar.
 
 ## Requisitos
 
@@ -38,11 +38,11 @@ Os principais pontos que gostaria de destacar no projeto são:
 - Um dos fatores que quero destacar é a organização e a clareza do código, embora longe de perfeito, creio que este seja um ponto de destaque.
 - Separação em client e server, sendo que o back-end funciona como uma API, isso garante que o app pode ser facilmente migrado para outras plataformas.
 - A cobertura de teste unitário está um bom nível, podendo facilmente ser incrementada devido ao extenso uso de mocks no projeto.
-- No front-end a utilização do React garante um desenvolvimento simples acelerado de novas funcionalidades, sendo tudo ja devidamente componentizado.
+- No front-end a utilização do React garante um desenvolvimento simples acelerado de novas funcionalidades, sendo tudo já devidamente componentizado.
 
 ## Melhorias
 Dentre as várias melhorias que não tive tempo de implementar estão:
 - Usar alguma API para buscar os restaurantes pela localização do usuário em tempo real.
 - Adicionar o HangFire para dispara os eventos que são diário e dependentes de horários no projeto.
 - Usar o socket.io para atualizar o front-end quando temos abertura/fechamento de votação.
-- Dar uma incrementada no front-end.
+- Melhorias visuais no front-end.
